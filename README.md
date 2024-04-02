@@ -22,9 +22,13 @@ Telegram, Social-Media, Data Collection
 
 # Structure
 public_group_messages folder -output folder where messages from channels will be stored as txt files
+
 seed folder - input folder where the channel names from where messages should be collected is stored
+
 src folder - Main code for data collection using Telethon API
+
 tracking folder - output folder for tracking the channel names and the time of the last message collected
+
 config.py - configurable parameters of the framework
 
 # Environment SetUp
@@ -42,7 +46,9 @@ The method collects only the raw messages. For enrichments to the messages, furt
 # How to Use
 
 Run in command line:    python 1_extract_from_seed_list.py
+
 The framework will ask for a phone number : Enter the phone number through which Telegram account has been created
+
 The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
 
 
@@ -53,7 +59,9 @@ The output of this method is channel names which needs to be specified in the pu
 
 # Sample Input to the method
   britishnewspatriot
+  
   bloomberg
+  
   SpotifyGroup
 
 # Sample Output of the method
