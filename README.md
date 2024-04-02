@@ -33,12 +33,17 @@ This program requires Python 3.x to run.
 # Dependencies
 To install the dependencies you may use: pip3 install -r requirements.txt
 
+You should also have Telegram installed and a Telegram account in your phone
+
+
 # Limitation
 The method collects only the raw messages. For enrichments to the messages, further modifications to the code would be required
 
 # How to Use
 
 Run in command line:    python 1_extract_from_seed_list.py
+The framework will ask for a phone number : Enter the phone number through which Telegram account has been created
+The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
 
 
 
