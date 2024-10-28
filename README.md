@@ -23,17 +23,18 @@ Telegram, Social-Media, Data Collection
 # Repo Structure
 The repository is organized as follows:
 * Folders
-    `public_group_messages folder´ -output folder where messages from channels will be stored as txt files
+  
+    `public_group_messages folder` -output folder where messages from channels will be stored as txt files
 
-   seed folder - input folder where the channel names from where messages should be collected is stored
+    `seed folder` - input folder where the channel names from where messages should be collected is stored
 
-   src folder - Main code for data collection using Telethon API
+    `src folder` - Main code for data collection using Telethon API
 
-    tracking folder - output folder for tracking the channel names and the time of the last message collected
+    `tracking folder` - output folder for tracking the channel names and the time of the last message collected
 
 *Files
 
-  config.py - configurable parameters of the framework
+    `config.py` - configurable parameters of the framework
 
 # Environment SetUp
 This program requires Python 3.x to run.
