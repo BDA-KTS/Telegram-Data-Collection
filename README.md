@@ -37,10 +37,12 @@ The repository is organized as follows:
     `config.py` - configurable parameters of the framework
 
 # Environment SetUp
-This program requires Python 3.x to run.
+This method requires Python 3.x to run.
 
 # Dependencies
-To install the dependencies you may use: pip3 install -r requirements.txt
+To install the dependencies you may use: 
+
+  `pip3 install -r requirements.txt `
 
 You should also have Telegram installed and a Telegram account in your phone
 
