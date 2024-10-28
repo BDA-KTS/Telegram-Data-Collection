@@ -23,7 +23,7 @@ Telegram, Social-Media, Data Collection
 # Repo Structure
 The repository is organized as follows:
 * Folders
-   public_group_messages folder -output folder where messages from channels will be stored as txt files
+    `public_group_messages folder´ -output folder where messages from channels will be stored as txt files
 
    seed folder - input folder where the channel names from where messages should be collected is stored
 
