@@ -74,7 +74,7 @@ The output of this method is channel names which needs to be specified in the pu
 
 # Sample Output of the method
 
-`{
+```{
   "_": "Message",
   "id": 2004376,
   "peer_id": {
@@ -121,7 +121,7 @@ The output of this method is channel names which needs to be specified in the pu
   "reactions": null,
   "restriction_reason": [],
   "ttl_period": null
-}`
+}```
 
 # Contact
 Susmita.Gangopadhyay@gesis.org
