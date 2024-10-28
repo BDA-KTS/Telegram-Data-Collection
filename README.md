@@ -74,54 +74,33 @@ The output of this method is channel names which needs to be specified in the pu
 
 # Sample Output of the method
 
-` {
-
+`{
   "_": "Message",
-  
   "id": 2004376,
-  
   "peer_id": {
     "_": "PeerChannel",
     "channel_id": 1050982793
-   },
-   
+  },
   "date": "2024-01-25 16:13:00.000000",
-  
   "message": "In math homework, Reem was given a value of x and was asked to find y using the following formula.\ny = x + exp(x/100)\nThe function exp(z) is exponentiation in the natural log base, that is, e to the power of z (also written as e^z).\nReem wrote down the value of y, which is equal to 418.23783639564084, but forgot to note the value of x. Can you help her recover the value of x?\nYour answer should be a real number x. The answer is considered correct if when substituted into the formula above, the result is very close to y. More precisely, the answer is considered correct if and only if the following holds.\n|y - (x + exp(x/100))| < 0.001",
-  
   "out": false,
-  
   "mentioned": false,
-  
   "media_unread": false,
-  
   "silent": false,
-  
   "post": false,
-  
   "from_scheduled": false,
-  
   "legacy": false,
-  
   "edit_hide": false,
-  
   "pinned": false,
-  
   "noforwards": false,
-  
   "from_id": {
     "_": "PeerUser",
     "user_id": 5885885469
   },
-  
   "fwd_from": null,
-  
   "via_bot_id": null,
-  
   "reply_to": null,
-  
   "media": null,
-  
   "reply_markup": null,
   "entities": [],
   "views": null,
@@ -142,8 +121,7 @@ The output of this method is channel names which needs to be specified in the pu
   "reactions": null,
   "restriction_reason": [],
   "ttl_period": null
-} `
-
+}`
 
 # Contact
 Susmita.Gangopadhyay@gesis.org
