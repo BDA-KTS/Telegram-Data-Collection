@@ -52,11 +52,13 @@ The method collects only the raw messages. For enrichments to the messages, furt
 
 # How to Use
 
-Run in command line:    python 1_extract_from_seed_list.py
+1. Run in command line:  
 
-The framework will ask for a phone number : Enter the phone number through which Telegram account has been created
+   `python 1_extract_from_seed_list.py`
 
-The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
+2. The framework will ask for a phone number : Enter the phone number through which Telegram account has been created
+
+3. The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
 
 
 
