@@ -32,7 +32,7 @@ The repository is organized as follows:
 
     `tracking folder` - output folder for tracking the channel names and the time of the last message collected
 
-*Files
+* Files
 
     `config.py` - configurable parameters of the framework
 
