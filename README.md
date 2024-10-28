@@ -1,16 +1,16 @@
 # Telegram-Data-Collection
 # Description
-The Telegram-Data-Collection is a method that collects data from Telegram . Given a Telegram channel(or a list of channels) as an input, it generates a collection of all messages from the channels. The framework uses Telethon API in the backend that interacts with the Telegram application to fetch messages from the channels.An user can leverage this tool to extract relevant messages from Telegram channels tailored to their specific interests.
+The method helps to deploy a Telegram data collection setup for extracting Telegram messages broadcast across channels. As a broadcasting social media platform, the channel administrator can broadcast content as text messages and other media to disseminate information to the users of that channel. The method takes public channel IDs (as seeds) and a telephone number with Telegram App installed as input and extracts messages across all seed channels as well as other public channels where the message was published. 
 
 # Relevant research questions that could be adressed with the help of this method
 
-Study of extremism in a specific geographic area(Walther, Samantha, and Andrew McCoy. "US extremism on Telegram." Perspectives on Terrorism 15.2 (2021): 100-124.)
+1. Study of extremism in a specific geographic area(Walther, Samantha, and Andrew McCoy. "US extremism on Telegram." Perspectives on Terrorism 15.2 (2021): 100-124.)
 
-Study of Terrorism and Mass Media (Yayla, Ahmet S., and Anne Speckhard. "Telegram: The mighty application that ISIS loves." International Center for the Study of Violent Extremism 9 (2017).)
+2 .Study of Terrorism and Mass Media (Yayla, Ahmet S., and Anne Speckhard. "Telegram: The mighty application that ISIS loves." International Center for the Study of Violent Extremism 9 (2017).)
 
-Right wing networks and their analysis (Urman, Aleksandra, and Stefan Katz. "What they do in the shadows: examining the far-right networks on Telegram." Information, communication & society 25.7 (2022): 904-923.)
+3. Right wing networks and their analysis (Urman, Aleksandra, and Stefan Katz. "What they do in the shadows: examining the far-right networks on Telegram." Information, communication & society 25.7 (2022): 904-923.)
 
-Investigate social media and fake channels (La Morgia, Massimo, et al. "It’sa Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
+4 .Investigate social media and fake channels (La Morgia, Massimo, et al. "It’sa Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
 
 
 # Social Science Usecase
@@ -20,16 +20,20 @@ John is a researcher studying about misinformation and rumors in social media. H
 # Keywords
 Telegram, Social-Media, Data Collection
 
-# Structure
-public_group_messages folder -output folder where messages from channels will be stored as txt files
+# Repo Structure
+The repository is organized as follows:
+* Folders
+   public_group_messages folder -output folder where messages from channels will be stored as txt files
 
-seed folder - input folder where the channel names from where messages should be collected is stored
+   seed folder - input folder where the channel names from where messages should be collected is stored
 
-src folder - Main code for data collection using Telethon API
+   src folder - Main code for data collection using Telethon API
 
-tracking folder - output folder for tracking the channel names and the time of the last message collected
+    tracking folder - output folder for tracking the channel names and the time of the last message collected
 
-config.py - configurable parameters of the framework
+*Files
+
+  config.py - configurable parameters of the framework
 
 # Environment SetUp
 This program requires Python 3.x to run.
