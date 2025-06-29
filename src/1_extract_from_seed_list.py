@@ -26,6 +26,21 @@ client.start()
 
 
 async def get_entity_id(entity_name):
+	"""
+	Retrieves the unique ID of a Telegram entity (e.g., user, chat, or channel) 
+	based on its username or identifier.
+	Args:
+		entity_name (str): The username or identifier of the Telegram entity.
+	Returns:
+		int: The unique ID of the entity if successfully retrieved, or -1 if an error occurs.
+	Exceptions:
+		- Handles `FloodWaitError` by waiting for the specified duration plus an additional buffer 
+		  before retrying.
+		- Logs and handles other exceptions gracefully, returning -1 in case of failure.
+	Note:
+		This function requires an active Telegram client instance (`client`) to fetch the entity.
+	"""
+	
 	try:
 		entity = await client.get_entity(entity_name)
 		print("++++++")
@@ -44,6 +59,34 @@ async def get_entity_id(entity_name):
 		
 
 async def extract():
+	"""
+	Asynchronous function to extract messages from a list of Telegram entities and save them to files.
+	This function performs the following tasks:
+	1. Reads a tracking file (if it exists) to keep track of the last message timestamp for each entity.
+	2. Iterates through a list of entity names, retrieves their messages using the Telegram client, 
+		and writes the messages to a corresponding file.
+	3. Updates the tracking file with the latest message timestamp and other metadata.
+	Key Features:
+	- Avoids duplicate message collection by checking timestamps.
+	- Introduces a delay between requests to avoid being banned by Telegram.
+	- Handles file creation and appending for storing messages.
+	- Updates a tracking CSV file to maintain metadata for each entity.
+	Args:
+		 None
+	Returns:
+		 None
+	Dependencies:
+		 - Requires the `OUT_TRACKING` file path for tracking metadata.
+		 - Requires the `OUT_DIR` directory for storing entity message files.
+		 - Uses the `client` object for interacting with the Telegram API.
+		 - Assumes `entity_names` is a predefined list of entity names to process.
+		 - Assumes `MAX_MESSAGES` is a predefined limit for the number of messages to fetch.
+	Notes:
+		 - The function uses asynchronous calls to interact with the Telegram API.
+		 - Ensure that the required libraries (`os`, `time`, `pandas as pd`, `json`, etc.) are imported.
+		 - The `get_entity_id` and `convert_dict_datetime_to_string` helper functions must be defined elsewhere in the code.
+	"""
+
 	tracking_df = None 
 	if os.path.exists(OUT_TRACKING):
 		tracking_df = pd.read_csv(OUT_TRACKING)
