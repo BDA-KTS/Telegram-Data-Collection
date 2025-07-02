@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+  title: "Telegram Data Collection"
+  message: >-
+    "If you use this software, please cite it using the metadata from this file".
+  type: software
+  authors:
+    - given-names: Susmita
+      family-names: Gangopadhyay
+      orcid: '0009-0009-1520-9070'
+      affiliation: 'GESIS , Leibniz Institute for the Social Sciences'
+  abstract: >-
+  "Telegram Data Collection is a software tool designed to facilitate the collection and analysis of data from Telegram channels and groups. It enables researchers and developers to gather multilingual textual data for various applications, including natural language processing, toxicity analysis, and unsupervised learning. The tool is built with a focus on scalability, ease of use, and compliance with ethical data collection practices."
+
+  keywords:
+    - Telegram
+    - Data Collection
+    - Natural Language Processing
+    - Multilingual Analysis
+    - Ethical Data Practices
+
+  license: Apache License
