@@ -28,8 +28,6 @@ The repository is organized as follows:
 
     `seed folder` - input folder where the channel names from where messages should be collected is stored
 
-    `src folder` - Main code for data collection using Telethon API
-
     `tracking folder` - output folder for tracking the channel names and the time of the last message collected
 
 * Files
