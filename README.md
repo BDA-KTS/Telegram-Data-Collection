@@ -28,40 +28,11 @@ The repository is organized as follows:
 
     `seed folder` - input folder where the channel names from where messages should be collected is stored
 
-    `src folder` - Main code for data collection using Telethon API
-
     `tracking folder` - output folder for tracking the channel names and the time of the last message collected
 
 * Files
 
     `config.py` - configurable parameters of the framework
-
-## Environment SetUp
-This method requires Python 3.x to run.
-
-## Dependencies
-To install the dependencies you may use: 
-
-  `pip3 install -r requirements.txt `
-
-You should also have Telegram installed and a Telegram account in your phone
-
-
-## Limitation
-The method collects only the raw messages. For enrichments to the messages, further modifications to the code would be required
-
-## How to Use
-
-1. Run in command line:  
-
-   `python 1_extract_from_seed_list.py`
-
-2. The framework will ask for a phone number : Enter the phone number through which Telegram account has been created
-
-3. The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
-
-
-
 
 ## Input data
 The output of this method is channel names which needs to be specified in the public_group_seed_list.txt file in seed folder
@@ -124,6 +95,33 @@ The output of this method is channel names which needs to be specified in the pu
 }
 ```
 
+## Environment SetUp
+This method requires Python 3.10 or higher to run.
+
+```bash
+conda create -n env python=3.11
+```
+
+## Dependencies
+To install the dependencies you may use: 
+
+  `pip3 install -r requirements.txt `
+
+You should also have Telegram installed and a Telegram account in your phone
+
+## How to Use
+
+1. Run in command line:  
+
+   `python extract_from_seed_list.py`
+
+2. The framework will ask for a phone number : Enter the phone number through which Telegram account has been created
+
+3. The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
+
+
+## Limitation
+The method collects only the raw messages. For enrichments to the messages, further modifications to the code would be required
 
 
 # Contact
