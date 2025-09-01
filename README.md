@@ -1,4 +1,5 @@
 # Telegram-Data-Collection
+
 ## Description
 The method helps to deploy a Telegram data collection setup for extracting messages broadcast across channels. As a broadcasting social media platform, the channel administrator can broadcast their content as text or other media messages to disseminate information to the users of that channel. The method takes public channel IDs (as seeds), requires a telephone number with Telegram App, and extracts messages in JSON format across all seed channels as well as other public channels where the messages from the seed channels were forwarded. 
 
@@ -13,37 +14,19 @@ The method helps to deploy a Telegram data collection setup for extracting messa
 4. Investigate social media and fake channels (La Morgia, Massimo, et al. "It’sa Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
 
 
-## Social Science Usecase
+## Use Cases
 John is a researcher studying about misinformation and rumors in social media. He seeks to harness Telegram data for his research endeavors. He visits the MH portal to find this method that helps him to fetch data from Telegram channels. He uses the search box on the top of the interface and types in Data Collection or Telegram. The search functionality of the MH shows him a list or related methods and tutorials that provides John with methods that can help him generate this huge collection of messages which he can reuse for his study.
 
-
-## Keywords
-Telegram, Social-Media, Data Collection
-
-## Repo Structure
-The repository is organized as follows:
-* Folders
-  
-    `public_group_messages folder` -output folder where messages from channels will be stored as txt files
-
-    `seed folder` - input folder where the channel names from where messages should be collected is stored
-
-    `tracking folder` - output folder for tracking the channel names and the time of the last message collected
-
-* Files
-
-    `config.py` - configurable parameters of the framework
-
 ## Input data
-The output of this method is channel names which needs to be specified in the public_group_seed_list.txt file in seed folder
+The output of this method is channel names which needs to be specified in the public_group_seed_list.txt file in seed folder. Following are few input examples:
 
-## Sample Input to the method
+- britishnewspatriot
+- bloomberg
+- SpotifyGroup
 
-    britishnewspatriot
-     bloomberg
-     SpotifyGroup`
+## Output Data
 
-## Sample Output of the method
+The method outputs the data as JSON object containing the messsage and its metadata as shown below.
 
 ```{
   "_": "Message",
@@ -95,6 +78,9 @@ The output of this method is channel names which needs to be specified in the pu
 }
 ```
 
+## Hardware Requirements
+The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD). However, more resources are needed to set it up for Telegram data collection.
+
 ## Environment SetUp
 This method requires Python 3.10 or higher to run.
 
@@ -102,7 +88,6 @@ This method requires Python 3.10 or higher to run.
 conda create -n env python=3.11
 ```
 
-## Dependencies
 To install the dependencies you may use: 
 
   `pip3 install -r requirements.txt `
@@ -120,11 +105,10 @@ You should also have Telegram installed and a Telegram account in your phone
 3. The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
 
 
-## Limitation
-The method collects only the raw messages. For enrichments to the messages, further modifications to the code would be required
-
+## Disclaimer
+The method collects only the raw messages that may require further enrichments.
 
 # Contact
-Susmita.Gangopadhyay@gesis.org
+For further queries, please contact <Susmita.Gangopadhyay@gesis.org>
 
 
