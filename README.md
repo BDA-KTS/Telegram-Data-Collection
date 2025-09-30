@@ -1,34 +1,34 @@
 # Telegram-Data-Collection
 
 ## Description
-The method helps to deploy a Telegram data collection setup for extracting messages broadcast across channels. As a broadcasting social media platform, the channel administrator can broadcast their content as text or other media messages to disseminate information to the users of that channel. The method takes public channel IDs (as seeds), requires a telephone number with Telegram App, and extracts messages in JSON format across all seed channels as well as other public channels where the messages from the seed channels were forwarded. 
 
-## Relevant research questions that could be adressed with the help of this method
-
-1. Study of extremism in a specific geographic area(Walther, Samantha, and Andrew McCoy. "US extremism on Telegram." Perspectives on Terrorism 15.2 (2021): 100-124.)
-
-2. Study of Terrorism and Mass Media (Yayla, Ahmet S., and Anne Speckhard. "Telegram: The mighty application that ISIS loves." International Center for the Study of Violent Extremism 9 (2017).)
-
-3. Right wing networks and their analysis (Urman, Aleksandra, and Stefan Katz. "What they do in the shadows: examining the far-right networks on Telegram." Information, communication & society 25.7 (2022): 904-923.)
-
-4. Investigate social media and fake channels (La Morgia, Massimo, et al. "It’sa Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
-
+The method extracts messages broadcast across Telegram channels. As a broadcasting social media platform, on Telegram channel administrator can broadcast their content as text or other media messages to disseminate information to the users of that channel. This method takes public channel IDs (as seeds), requires a telephone number with Telegram App, and extracts messages in JSON format across all seed channels as well as other public channels where the messages from the seed channels were forwarded. 
 
 ## Use Cases
-John is a researcher studying about misinformation and rumors in social media. He seeks to harness Telegram data for his research endeavors. He visits the MH portal to find this method that helps him to fetch data from Telegram channels. He uses the search box on the top of the interface and types in Data Collection or Telegram. The search functionality of the MH shows him a list or related methods and tutorials that provides John with methods that can help him generate this huge collection of messages which he can reuse for his study.
+
+Telegram data collected via this method can be used in various analyses. For example:
+
+- Analysing extremism in a specific geographic area (e.g., Walther, Samantha, and Andrew McCoy. "US extremism on Telegram." Perspectives on Terrorism 15.2 (2021): 100-124.)
+- Analysing terrorism and mass media (e.g., Yayla, Ahmet S., and Anne Speckhard. "Telegram: The mighty application that ISIS loves." International Center for the Study of Violent Extremism 9 (2017).)
+- Analysing right wing networks (e.g., Urman, Aleksandra, and Stefan Katz. "What they do in the shadows: examining the far-right networks on Telegram." Information, communication & society 25.7 (2022): 904-923.)
+- Analysing social media and fake channels (e.g., La Morgia, Massimo, et al. "It’sa Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
 
 ## Input data
-The output of this method is channel names which needs to be specified in the public_group_seed_list.txt file in seed folder. Following are few input examples:
 
-- britishnewspatriot
-- bloomberg
-- SpotifyGroup
+The output of this method is channel names which needs to be specified in the [`public_group_seed_list.txt`](seed/public_group_seed_list.txt) file in the `seed` folder. Following are few input examples:
+
+```
+britishnewspatriot
+bloomberg
+SpotifyGroup
+```
 
 ## Output Data
 
-The method outputs the data as JSON object containing the messsage and its metadata as shown below.
+The method outputs the collected raw data as JSON object containing the message and its metadata as in the example shown below.
 
-```{
+```json
+{
   "_": "Message",
   "id": 2004376,
   "peer_id": {
@@ -79,9 +79,11 @@ The method outputs the data as JSON object containing the messsage and its metad
 ```
 
 ## Hardware Requirements
-The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD). However, more resources are needed to set it up for Telegram data collection.
 
-## Environment SetUp
+The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD). However, more resources are needed to set it up for large-scale Telegram data collection.
+
+## Environment Setup
+
 This method requires Python 3.10 or higher to run.
 
 ```bash
@@ -90,25 +92,21 @@ conda create -n env python=3.11
 
 To install the dependencies you may use: 
 
-  `pip3 install -r requirements.txt `
+```bash
+pip3 install -r requirements.txt
+```
 
 You should also have Telegram installed and a Telegram account in your phone
 
 ## How to Use
 
 1. Run in command line:  
-
-   `python extract_from_seed_list.py`
-
-2. The framework will ask for a phone number : Enter the phone number through which Telegram account has been created
-
-3. The framework will ask for an one time password : Enter the OTP sent to you through the Telegram app
-
-
-## Disclaimer
-The method collects only the raw messages that may require further enrichments.
+  ```bash
+  python extract_from_seed_list.py
+  ```
+2. The framework will ask for a phone number: Enter the phone number through which Telegram account has been created
+3. The framework will ask for an one time password: Enter the one-time-password (OTP) sent to you through the Telegram app
 
 # Contact
+
 For further queries, please contact <Susmita.Gangopadhyay@gesis.org>
-
-
