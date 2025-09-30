@@ -6,7 +6,7 @@ The method extracts messages broadcast across Telegram channels. As a broadcasti
 
 ## Use Cases
 
-Telegram data collected via this method can be used in various analyses. For example:
+Telegram data, such as collected via this method, can be used in various analyses. For example:
 
 - Analysing extremism in a specific geographic area (e.g., Walther, Samantha, and Andrew McCoy. "US extremism on Telegram." Perspectives on Terrorism 15.2 (2021): 100-124.)
 - Analysing terrorism and mass media (e.g., Yayla, Ahmet S., and Anne Speckhard. "Telegram: The mighty application that ISIS loves." International Center for the Study of Violent Extremism 9 (2017).)
@@ -25,7 +25,7 @@ SpotifyGroup
 
 ## Output Data
 
-The method outputs the collected raw data as JSON object containing the message and its metadata as in the example shown below.
+The method outputs the collected raw data as JSON objects containing the message and its metadata like in the example shown below into the [`public_group_messages`](public_group_messages/) directory (see there for some examples). The file [`tracking/public_group.csv`](tracking/public_group.csv) is automatically updated to track the last collected message per channel.
 
 ```json
 {
