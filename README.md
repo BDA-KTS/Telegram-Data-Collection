@@ -11,7 +11,7 @@ Telegram data, such as collected via this method, can be used in various analyse
 - Analysing extremism in a specific geographic area (e.g., Walther, Samantha, and Andrew McCoy. "US extremism on Telegram." Perspectives on Terrorism 15.2 (2021): 100-124.)
 - Analysing terrorism and mass media (e.g., Yayla, Ahmet S., and Anne Speckhard. "Telegram: The mighty application that ISIS loves." International Center for the Study of Violent Extremism 9 (2017).)
 - Analysing right wing networks (e.g., Urman, Aleksandra, and Stefan Katz. "What they do in the shadows: examining the far-right networks on Telegram." Information, communication & society 25.7 (2022): 904-923.)
-- Analysing social media and fake channels (e.g., La Morgia, Massimo, et al. "It’sa Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
+- Analysing social media and fake channels (e.g., La Morgia, Massimo, et al. "It’s a Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
 
 ## Input data
 
