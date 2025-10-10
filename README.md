@@ -23,6 +23,8 @@ bloomberg
 SpotifyGroup
 ```
 
+*To get the complete seed list used and the dataset created with it, please go to [https://search.gesis.org/research_data/SDN-10.7802-2825](https://search.gesis.org/research_data/SDN-10.7802-2825) and click on the Dataset from the right menu. The list link on the list is the seeds*
+
 ## Output Data
 
 The method outputs the collected raw data as JSON objects containing the message and its metadata like in the example shown below into the [`public_group_messages`](public_group_messages/) directory (see there for some examples). The file [`tracking/public_group.csv`](tracking/public_group.csv) is automatically updated to track the last collected message per channel.
