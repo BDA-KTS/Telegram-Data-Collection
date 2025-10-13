@@ -25,7 +25,7 @@ SpotifyGroup
 
 ## Output Data
 
-The method writes the collected raw data as JSON objects containing the messages and their metadata into one file per channel. the [`output/messages`](output/messages/) directory. The method keeps track of the last collected messages per channel, so that those are not fetched again when the method is run again. An example message is shown here, whereas others are in [`examples/bloomberg.txt`](examples/bloomberg.txt):
+The method writes the collected raw data as JSON objects containing the messages and their metadata into one file per channel in the `output/messages` directory. The method keeps track of the last collected messages per channel, so that those are not fetched again when the method is run again. An example message is shown here, whereas others are in [`examples/bloomberg.txt`](examples/bloomberg.txt):
 
 ```json
 {
