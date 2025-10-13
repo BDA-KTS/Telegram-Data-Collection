@@ -146,7 +146,7 @@ async def extract():
 			timestamp = time.time()
 
 			if os.path.exists(OUT_TRACKING):
-				if entity_id in tracking_df['ids'].tolist():
+				if tracking_df is not None and entity_id in tracking_df['ids'].tolist():
 					tracking_df.loc[tracking_df['ids'] == entity_id, 'timestamp'] = timestamp
 					tracking_df.loc[tracking_df['ids'] == entity_id, 'last_message_time'] = last_message_time
 				else:
@@ -163,6 +163,8 @@ async def extract():
 				df['names'] = [entity_name]
 				df['timestamp'] = [timestamp]
 				df['last_message_time'] = [last_message_time]
+				if not os.path.exists(os.path.dirname(OUT_TRACKING)):
+					os.makedirs(os.path.dirname(OUT_TRACKING))
 				df.to_csv(OUT_TRACKING, index=False)
 		
 	

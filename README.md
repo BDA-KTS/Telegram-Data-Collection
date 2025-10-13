@@ -15,7 +15,7 @@ Telegram data, such as collected via this method, can be used in various analyse
 
 ## Input data
 
-The output of this method is channel names which needs to be specified in the [`public_group_seed_list.txt`](seed/public_group_seed_list.txt) file in the `seed` folder. Following are few input examples:
+The input of this method is channel names which needs to be specified in a [seed list](input/public_group_seed_list.txt) file, one channel name per line. For example:
 
 ```
 britishnewspatriot
@@ -23,11 +23,9 @@ bloomberg
 SpotifyGroup
 ```
 
-*To get the complete seed list used and the dataset created with it, please go to [https://search.gesis.org/research_data/SDN-10.7802-2825](https://search.gesis.org/research_data/SDN-10.7802-2825) and click on the Dataset from the right menu. The list link on the list is the seeds*
-
 ## Output Data
 
-The method outputs the collected raw data as JSON objects containing the message and its metadata like in the example shown below into the [`public_group_messages`](public_group_messages/) directory (see there for some examples). The file [`tracking/public_group.csv`](tracking/public_group.csv) is automatically updated to track the last collected message per channel.
+The method writes the collected raw data as JSON objects containing the messages and their metadata into one file per channel. the [`output/messages`](output/messages/) directory. The method keeps track of the last collected messages per channel, so that those are not fetched again when the method is run again. An example message is shown here, whereas others are in [`examples/bloomberg.txt`](examples/bloomberg.txt):
 
 ```json
 {
@@ -86,29 +84,30 @@ The method runs on a small virtual machine provided by a cloud computing company
 
 ## Environment Setup
 
-This method requires Python 3.10 or higher to run.
+This method requires Python 3.10 or higher to run. To avoid problems with your system's Python installation, create and activate a virtual environment (e.g., [venv](https://docs.python.org/3/library/venv.html)).
 
-```bash
-conda create -n env python=3.11
-```
-
-To install the dependencies you may use: 
+Then install all requirements using:
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
-You should also have Telegram installed and a Telegram account in your phone
+You also need to have Telegram installed and a Telegram account in your phone
 
 ## How to Use
 
-1. Run in command line:  
+1. Run in command line:
   ```bash
   python extract_from_seed_list.py
   ```
 2. The framework will ask for a phone number: Enter the phone number through which Telegram account has been created
 3. The framework will ask for an one time password: Enter the one-time-password (OTP) sent to you through the Telegram app
 
+By default, this will collect 10 messages for each channel. Change this number using the `MAX_MESSAGES` settings in the [`config.py`](config.py). You can also modify the input and output files there.
+
+Your authentication information is stored in a `nano.session` file, so that you do not need to re-authenticate on next use. Do not share this file.
+
 # Contact
 
 For further queries, please contact <Susmita.Gangopadhyay@gesis.org>
+
