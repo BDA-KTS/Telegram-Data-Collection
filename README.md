@@ -92,20 +92,26 @@ Then install all requirements using:
 pip3 install -r requirements.txt
 ```
 
-You also need to have Telegram installed and a Telegram account in your phone
+You also need to have Telegram installed and a Telegram account in your phone.
 
 ## How to Use
 
-1. Run in command line:
+1. Obtain an API ID and hash for connecting to the Telegram API, using the [official instructions](https://core.telegram.org/api/obtaining_api_id). You need to specify at least an (arbitrary) app title and a short name.
+  - Insert the `App api_id` and the `App api_hash` you get from the app page into the [`config.py`](config.py)
+2. Run in command line:
   ```bash
   python extract_from_seed_list.py
   ```
-2. The framework will ask for a phone number: Enter the phone number through which Telegram account has been created
-3. The framework will ask for an one time password: Enter the one-time-password (OTP) sent to you through the Telegram app
+  - The program will ask for a phone number: Enter the phone number through which Telegram account has been created; this will send a message to you via Telegram
+  - The program will ask for an one time password: Enter the one-time-password (OTP) contained in the message sent to you in previous step
 
-By default, this will collect 10 messages for each channel. Change this number using the `MAX_MESSAGES` settings in the [`config.py`](config.py). You can also modify the input and output files there.
+To focus your collection, identify channels that you might be interested in on [TGStat](https://tgstat.com/) and replace the ones in the [seed file](input/public_group_seed_list.txt) with the ones you found.
 
-Your authentication information is stored in a `nano.session` file, so that you do not need to re-authenticate on next use. Do not share this file.
+## Technical Details
+
+By default, this method will collect up to 10 messages for each channel. Change this number using the `MAX_MESSAGES` settings in the [`config.py`](config.py). You can also modify the input and output files there. If you run the method again, the method makes sure to only add messages to the output files that are newer than the ones already present there.
+
+Your authentication information is stored in a `nano.session` file, so that you do not need to re-authenticate on next use. Do not share this file. Neither should you share the `config.py` after you inserted your API ID and hash.
 
 # Contact
 
