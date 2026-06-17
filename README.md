@@ -13,7 +13,7 @@ Telegram data, such as collected via this method, can be used in various analyse
 - Analysing right wing networks (e.g., Urman, Aleksandra, and Stefan Katz. "What they do in the shadows: examining the far-right networks on Telegram." Information, communication & society 25.7 (2022): 904-923.)
 - Analysing social media and fake channels (e.g., La Morgia, Massimo, et al. "It’s a Trap! Detection and Analysis of Fake Channels on Telegram." 2023 IEEE International Conference on Web Services (ICWS). IEEE, 2023.)
 
-## Input data
+## Input Data
 
 The input of this method is channel names which needs to be specified in a [seed list](input/public_group_seed_list.txt) file, one channel name per line. For example:
 
@@ -113,7 +113,7 @@ By default, this method will collect up to 10 messages for each channel. Change 
 
 Your authentication information is stored in a `nano.session` file, so that you do not need to re-authenticate on next use. Do not share this file. Neither should you share the `config.py` after you inserted your API ID and hash.
 
-# Contact
+## Contact Details
 
 For further queries, please contact <Susmita.Gangopadhyay@gesis.org>
 
